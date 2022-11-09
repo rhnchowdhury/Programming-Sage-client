@@ -1,0 +1,66 @@
+[
+    {
+        "id": "636a6afea3607ef72821f798",
+        "title": "C",
+        "image": "https://repository-images.githubusercontent.com/427210279/9918a449-bc04-42ac-af29-1d1856aa9530",
+        "price": 150,
+        "details": "C is a procedural programming language. It was initially developed by Dennis Ritchie as a system programming language to write operating system. C programming is considered as the base for other programming languages, that is why it is known as mother language. C programs are very efficient because they contain a variety of data types and robust operators. C was initially used for system development work, particularly the programs that make-up the operating system. C was adopted as a system development language because it produces code that runs nearly as fast as the code written in assembly language.",
+        "ratings": 4.9
+    },
+    {
+        "id": "636a6afe74571033bb7dd137",
+        "title": "JavaScript",
+        "image": "https://4.bp.blogspot.com/-s2EhTt57oeU/XHtQtO1QNLI/AAAAAAAANW8/KYkPQEZUyocSpA2RzqCcVt31imXPi63RACLcBGAs/s1600/Free%2BCourses%2Bto%2Blearn%2BJavaScript.jpg",
+        "price": 155,
+        "details": "There is no doubt that JavaScript is the most popular programming language at this moment, and it's also confirmed by StackOverFlow's Survey. You can build static websites, web applications, native mobile applications (yes, you can do that too), desktop applications, and even server-side applications in JavaScript. It also makes you a hundred times more employer as there are tons of web development jobs out there. Because of that, more and more developers are learning JavaScript to become web developers.",
+        "ratings": 4.9
+    },
+    {
+        "id": "636a6afec0809468eea96d78",
+        "title": "Python",
+        "image": "https://miro.medium.com/max/1400/1*m0H6-tUbW6grMlezlb52yw.png",
+        "price": 140,
+        "details": "Python is a general-purpose, versatile, and powerful programming language. It’s a great first language because Python code is concise and easy to read. Whatever you want to do, python can do it. From web development to machine learning to data science, Python is the language for you. Being a developer, writing code and making it run is not the only job to do. Python is known for its readability and simplicity. So, why tamper it? Writing clean and readable code is an art which is appreciated by other programmers and let them understand every bit.",
+        "ratings": 4.8
+    },
+    {
+        "id": "636a6afe6400ca47c96ca59e",
+        "title": "Java",
+        "image": "https://www.developer.com/wp-content/uploads/2021/09/Java-tutorials.jpg",
+        "price": 135,
+        "details": "Java is a general-purpose programming language intended to let programmers write once, run anywhere (WORA). This means that compiled Java code can run on all platforms that support Java without the need to recompile. his programming tutorial will provide an overview of variable rules, their types, how to declare, initialize, and assign values to variables, as well as variable naming conventions in Java. o learn Java, you must have the basic knowledge of C/C++ programming language. It is used to develop rich internet applications. It uses a lightweight user interface API.This Java programming tutorial is designed to help beginners and professionals.",
+        "ratings": 4.7
+    },
+    {
+        "id": "636a6afe372e7170c13029ed",
+        "title": "PHP",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg",
+        "price": 130,
+        "details": "PHP is a general-purpose scripting language geared toward web development. It handles dynamic content, database as well as session tracking for the website. PHP supports several protocols such as HTTP, POP3, SNMP, LDAP, IMAP, and many more.  PHP is basically used for developing web based software applications. This tutorial helps you to build your base with PHP. PHP script is executed much faster than those scripts which are written in other languages such as JSP and ASP. PHP uses its own memory, so the server workload and loading time is automatically reduced, which results in faster processing speed and better performance.PHP supports all the leading databases such as MySQL, SQLite, ODBC, etc",
+        "ratings": 4.0
+    },
+    {
+        "id": "636a6afe86314f6177d5735a",
+        "title": "Kotlin",
+        "image": "https://www.devteam.space/wp-content/uploads/2022/05/kotlin.jpeg",
+        "price": 125,
+        "details": "Kotlin is a cross-platform, statically typed, general-purpose programming language with type inference. Kotlin is designed to interoperate fully with Java, and the JVM version of Kotlin's standard library depends on the Java Class Library, but type inference allows its syntax to be more concise. Kotlin Application Deployment is faster to compile, lightweight, and prevents applications from increasing size. Any chunk of code written in it is much smaller compared to it, as it is less verbose and less code means fewer bugs. It compiles the code to a bytecode which can be executed in the JVM. Starting with Android 9 (API level 28), the Android SDK contains nullability annotations to help avoid NullPointerExceptions. API reference documentation is also available in Kotlin.",
+        "ratings": 4.1
+    },
+    {
+        "id": "636a6afe7688c7f018835c31",
+        "title": "Swift",
+        "image": "https://i.pinimg.com/originals/9d/94/a5/9d94a53738b84d6c0e5ab094bcfe2af1.png",
+        "price": 125,
+        "details": "Swift is a powerful and intuitive programming language for iOS, iPadOS, macOS, tvOS, and watchOS. Writing Swift code is interactive and fun, the syntax is concise yet expressive, and Swift includes modern features developers love. Swift code is safe by design and produces software that runs lightning-fast. Swift eliminates entire classes of unsafe code. Variables are always initialized before use, arrays and integers are checked for overflow, memory is automatically managed, and enforcement of exclusive access to memory guards against many programming mistakes.",
+        "ratings": 4.0
+    },
+    {
+        "id": "636a6afe3fcc5f0fdb924c66",
+        "title": "Go",
+        "image": "https://www.vskills.in/certification/blog/wp-content/uploads/2020/03/TOp-4-1024x256.png",
+        "details": "Golang is a procedural and statically typed programming language having the syntax similar to C programming language. Sometimes it is termed as Go Programming Language. It provides a rich standard library, garbage collection, and dynamic-typing capability. It provides garbage collection, type safety, dynamic-typing capability, many advanced built-in types such as variable length arrays and key-value maps. It also provides a rich standard library. The Go programming language was launched in November 2009 and is used in some of the Google's production systems.With popular open source packages and a robust standard library, use Go to create fast and elegant CLIs.",
+        "price": 130,
+        "ratings": 4.0
+    }
+]

@@ -8,26 +8,26 @@ const Banner = () => {
 
         <div className="carousel w-full">
             <div id="slide1" className="carousel-item relative w-full design" >
-                <img src={slider1} alt='' className="w-full overlay" />
+                <img src={slider1} alt='' className="w-full overlay rounded-md" />
                 <div className="absolute flex justify-between transform -translate-y-1/2 top-1/2">
                     <h1 className='text-6xl font-bold text-white text'>
                         Skill your self for <span className='ml-14'>your success</span>
                     </h1>
                 </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 right-5 bottom-0">
-                    <a href="#slide4" className="btn btn-circle mr-3">❮</a>
+                    <a href="#slide3" className="btn btn-circle mr-3">❮</a>
                     <a href="#slide2" className="btn btn-circle">❯</a>
                 </div>
             </div>
             <div id="slide2" className="carousel-item relative w-full design">
-                <img src={slider2} alt='' className="w-full" />
+                <img src={slider2} alt='' className="w-full overlay rounded-md" />
                 <div className="absolute flex justify-between transform -translate-y-1/2 right-5 bottom-0">
                     <a href="#slide1" className="btn btn-circle mr-3">❮</a>
                     <a href="#slide3" className="btn btn-circle">❯</a>
                 </div>
             </div>
             <div id="slide3" className="carousel-item relative w-full design">
-                <img src={slider3} alt='' className="w-full overlay" />
+                <img src={slider3} alt='' className="w-full overlay rounded-md" />
                 <div className="absolute flex justify-between transform -translate-y-1/2 top-1/2">
                     <h1 className='text-6xl font-bold text-white text'>
                         Skill your self for <span className='ml-14'>your success</span>
@@ -35,7 +35,7 @@ const Banner = () => {
                 </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 right-5 bottom-0">
                     <a href="#slide2" className="btn btn-circle mr-3">❮</a>
-                    <a href="#slide4" className="btn btn-circle">❯</a>
+                    <a href="#slide1" className="btn btn-circle">❯</a>
                 </div>
             </div>
         </div>
