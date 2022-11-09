@@ -1,4 +1,5 @@
 import React from 'react';
+import { HiArrowNarrowRight } from "react-icons/hi";
 
 const ListShow = ({ list }) => {
     const { title, image, price, details } = list;
@@ -10,7 +11,8 @@ const ListShow = ({ list }) => {
                 <p>{details}</p>
                 <p>{price}</p>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
+                    {/* <button className="btn btn-primary">Buy Now</button> */}
+                    <HiArrowNarrowRight></HiArrowNarrowRight>
                 </div>
             </div>
         </div>
