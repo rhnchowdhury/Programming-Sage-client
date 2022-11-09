@@ -1,12 +1,14 @@
 import React from 'react';
 import Banner from '../../Shared/Banner';
-import Course from '../Courses/Course';
+import List from './List/List';
+
+
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <Course></Course>
+            <List></List>
         </div>
     );
 };

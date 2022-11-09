@@ -1,6 +1,6 @@
 [
     {
-        "id": "636a6afea3607ef72821f798",
+        "course_id": 1,
         "title": "C",
         "image": "https://repository-images.githubusercontent.com/427210279/9918a449-bc04-42ac-af29-1d1856aa9530",
         "price": 150,
@@ -8,7 +8,7 @@
         "ratings": 4.9
     },
     {
-        "id": "636a6afe74571033bb7dd137",
+        "course_id": 2,
         "title": "JavaScript",
         "image": "https://4.bp.blogspot.com/-s2EhTt57oeU/XHtQtO1QNLI/AAAAAAAANW8/KYkPQEZUyocSpA2RzqCcVt31imXPi63RACLcBGAs/s1600/Free%2BCourses%2Bto%2Blearn%2BJavaScript.jpg",
         "price": 155,
@@ -16,7 +16,7 @@
         "ratings": 4.9
     },
     {
-        "id": "636a6afec0809468eea96d78",
+        "course_id": 3,
         "title": "Python",
         "image": "https://miro.medium.com/max/1400/1*m0H6-tUbW6grMlezlb52yw.png",
         "price": 140,
@@ -24,7 +24,7 @@
         "ratings": 4.8
     },
     {
-        "id": "636a6afe6400ca47c96ca59e",
+        "course_id": 4,
         "title": "Java",
         "image": "https://www.developer.com/wp-content/uploads/2021/09/Java-tutorials.jpg",
         "price": 135,
@@ -32,7 +32,7 @@
         "ratings": 4.7
     },
     {
-        "id": "636a6afe372e7170c13029ed",
+        "course_id": 5,
         "title": "PHP",
         "image": "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg",
         "price": 130,
@@ -40,7 +40,7 @@
         "ratings": 4.0
     },
     {
-        "id": "636a6afe86314f6177d5735a",
+        "course_id": 6,
         "title": "Kotlin",
         "image": "https://www.devteam.space/wp-content/uploads/2022/05/kotlin.jpeg",
         "price": 125,
@@ -48,7 +48,7 @@
         "ratings": 4.1
     },
     {
-        "id": "636a6afe7688c7f018835c31",
+        "course_id": 7,
         "title": "Swift",
         "image": "https://i.pinimg.com/originals/9d/94/a5/9d94a53738b84d6c0e5ab094bcfe2af1.png",
         "price": 125,
@@ -56,7 +56,7 @@
         "ratings": 4.0
     },
     {
-        "id": "636a6afe3fcc5f0fdb924c66",
+        "course_id": 8,
         "title": "Go",
         "image": "https://www.vskills.in/certification/blog/wp-content/uploads/2020/03/TOp-4-1024x256.png",
         "details": "Golang is a procedural and statically typed programming language having the syntax similar to C programming language. Sometimes it is termed as Go Programming Language. It provides a rich standard library, garbage collection, and dynamic-typing capability. It provides garbage collection, type safety, dynamic-typing capability, many advanced built-in types such as variable length arrays and key-value maps. It also provides a rich standard library. The Go programming language was launched in November 2009 and is used in some of the Google's production systems.With popular open source packages and a robust standard library, use Go to create fast and elegant CLIs.",
