@@ -1,10 +1,28 @@
 import React from 'react';
 
 const ReviewsShow = ({ review }) => {
-    const { student, url, message } = review;
+    const { _id, student, url, message } = review;
+
+    const handleDelete = id => {
+        const proceed = window.confirm('You want to cancel this order?');
+        if (proceed) {
+            fetch(`http://localhost:5000/reviews?email=${id}`, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                })
+        }
+    }
 
     return (
         <tr>
+            <th>
+                <label>
+                    <button onClick={() => handleDelete(_id)} className='btn btn-ghost'>X</button>
+                </label>
+            </th>
             <td>
                 <div className="flex items-center space-x-3">
                     <div className="avatar">

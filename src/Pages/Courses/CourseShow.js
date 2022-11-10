@@ -9,7 +9,7 @@ const CourseShow = ({ course }) => {
             <div className="card-body">
                 <h2 className="card-title">{title}</h2>
                 <p>{details}</p>
-                <p>{price}</p>
+                <p>${price}</p>
                 <div className="card-actions justify-end">
                     <Link to={`/courses/${_id}`}><button className="btn btn-primary">View Details</button></Link>
                 </div>

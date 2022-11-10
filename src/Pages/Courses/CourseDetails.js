@@ -25,6 +25,30 @@ const CourseDetails = () => {
             message
         };
 
+        // if (!login) {
+        //     <p>Please <Link className='text-violet-600 font-bold' to='/login'>login </Link> to add a review</p>
+
+        // } else {
+
+        //     fetch('http://localhost:5000/reviews', {
+        //         method: 'POST',
+        //         headers: {
+        //             'content-type': 'application/json'
+        //         },
+        //         body: JSON.stringify(review)
+        //     })
+        //         .then(res => res.json())
+        //         .then(data => {
+        //             console.log(data)
+        //             if (data.acknowledged) {
+        //                 alert('review successfully')
+        //                 form.reset();
+        //             }
+        //         })
+        //         .catch(err => console.error(err))
+
+        // }
+
         fetch('http://localhost:5000/reviews', {
             method: 'POST',
             headers: {
