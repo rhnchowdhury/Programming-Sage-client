@@ -10,7 +10,27 @@ const Review = () => {
         fetch(`http://localhost:5000/reviews?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setReviews(data))
-    }, [user?.email])
+    }, [user?.email]);
+
+    const handleDelete = id => {
+        const proceed = window.confirm('You want to cancel this order?');
+        if (proceed) {
+            fetch(`http://localhost:5000/reviews/${id}`, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.deletedCount > 0) {
+                        alert('deleted successfully')
+                        const remaining = reviews.filter(rev => rev._id !== id);
+                        setReviews(remaining);
+
+                    }
+                })
+        }
+    };
+
     return (
         <div>
             <h1>this is review page{reviews.length}</h1>
@@ -35,6 +55,7 @@ const Review = () => {
                         {
                             reviews.map(review => <ReviewsShow key={review._id}
                                 review={review}
+                                handleDelete={handleDelete}
                             ></ReviewsShow>)
                         }
                     </tbody>

@@ -1,20 +1,20 @@
 import React from 'react';
 
-const ReviewsShow = ({ review }) => {
+const ReviewsShow = ({ review, handleDelete }) => {
     const { _id, student, url, message } = review;
 
-    const handleDelete = id => {
-        const proceed = window.confirm('You want to cancel this order?');
-        if (proceed) {
-            fetch(`http://localhost:5000/reviews?email=${id}`, {
-                method: 'DELETE'
-            })
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data)
-                })
-        }
-    }
+    // const handleDelete = id => {
+    //     const proceed = window.confirm('You want to cancel this order?');
+    //     if (proceed) {
+    //         fetch(`http://localhost:5000/reviews/${id}`, {
+    //             method: 'DELETE'
+    //         })
+    //             .then(res => res.json())
+    //             .then(data => {
+    //                 console.log(data)
+    //             })
+    //     }
+    // }
 
     return (
         <tr>
