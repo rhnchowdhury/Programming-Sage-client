@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
+import Review from '../Reviews/Review';
 
 const CourseDetails = () => {
     const { _id, title, image, price, details } = useLoaderData();
@@ -11,7 +12,8 @@ const CourseDetails = () => {
         const form = event.target;
         const name = `${form.first.value} ${form.last.value}`;
         const email = user?.email || 'unregistered';
-        const phone = form.phone.value;
+        const url = form.url.value;
+        const message = form.message.value;
 
         const review = {
             course: _id,
@@ -19,7 +21,8 @@ const CourseDetails = () => {
             price,
             student: name,
             email,
-            phone
+            url,
+            message
         };
 
         fetch('http://localhost:5000/reviews', {
@@ -41,26 +44,31 @@ const CourseDetails = () => {
     }
 
     return (
-        <div>
+        <div className='grid grid-cols-1 lg:grid-cols-2'>
             <div className="card w-96 bg-base-100 shadow-xl">
-                <figure><img src={image} alt="Shoes" className='w-full h-full' /></figure>
+                <figure><img src={image} alt="" className='w-full h-full' /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{title}</h2>
                     <p>{details}</p>
                     <p>{price}</p>
                 </div>
             </div>
-            <h1>Review Section</h1>
+
             <div>
+                <h1>Review Section</h1>
+                <Review></Review>
                 <h2>Others review</h2>
                 <form onSubmit={handleReview}>
                     <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
                         <input name='first' type="text" placeholder="First Name" className="input input-bordered w-fulls" />
                         <input name='last' type="text" placeholder="Last Name" className="input input-bordered w-full" />
-                        <input name='phone' type="text" placeholder="Your Phone" className="input input-bordered w-full" />
+                        <input name='url' type="text" placeholder="Image URL" className="input input-bordered w-full" />
                         <input name='email' type="text" placeholder="Your Email" defaultValue={user?.email} className="input input-bordered w-full" required />
                     </div>
-                    <button className='btn'>Submit</button>
+                    <textarea className="textarea textarea-bordered h-24 w-full" name='message' placeholder="Your message"></textarea>
+                    <p>Please <Link className='text-violet-600 font-bold' to='/login'>login </Link> to add a review</p>
+                    <input className='btn' type="submit" value="Add my review" />
+
                 </form>
             </div>
         </div>
