@@ -48,7 +48,7 @@ const Review = () => {
                             <th>Picture</th>
                             <th>Name</th>
                             <th>Message</th>
-                            <th></th>
+                            <th>Update</th>
                         </tr>
                     </thead>
                     <tbody>

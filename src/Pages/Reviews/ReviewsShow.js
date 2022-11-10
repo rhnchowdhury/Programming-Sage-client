@@ -1,26 +1,14 @@
 import React from 'react';
+import { HiOutlineTrash } from "react-icons/hi";
 
 const ReviewsShow = ({ review, handleDelete }) => {
     const { _id, student, url, message } = review;
-
-    // const handleDelete = id => {
-    //     const proceed = window.confirm('You want to cancel this order?');
-    //     if (proceed) {
-    //         fetch(`http://localhost:5000/reviews/${id}`, {
-    //             method: 'DELETE'
-    //         })
-    //             .then(res => res.json())
-    //             .then(data => {
-    //                 console.log(data)
-    //             })
-    //     }
-    // }
 
     return (
         <tr>
             <th>
                 <label>
-                    <button onClick={() => handleDelete(_id)} className='btn btn-ghost'>X</button>
+                    <button onClick={() => handleDelete(_id)} className='btn btn-ghost'><HiOutlineTrash className=' w-6 h-6'></HiOutlineTrash></button>
                 </label>
             </th>
             <td>
@@ -36,6 +24,9 @@ const ReviewsShow = ({ review, handleDelete }) => {
                 <div className="font-bold">{student}</div>
             </td>
             <td>{message}</td>
+            <td>
+                <button className="btn btn-ghost btn-xs">details</button>
+            </td>
         </tr>
     );
 };

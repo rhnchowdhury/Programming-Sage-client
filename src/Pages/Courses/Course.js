@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { AuthContext } from '../../Context/AuthProvider';
 import CourseShow from './CourseShow';
 
 const Course = () => {
+    const { loading } = useContext(AuthContext);
     const [courses, setCourses] = useState([]);
 
     useEffect(() => {
@@ -9,6 +11,9 @@ const Course = () => {
             .then(res => res.json())
             .then(data => setCourses(data))
     }, []);
+    if (loading) {
+        return <div className="radial-progress" style={{ "--value": 70 }}></div>
+    }
 
     return (
         <div>

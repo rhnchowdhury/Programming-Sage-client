@@ -6,12 +6,12 @@ const PrivateRoute = ({ children }) => {
     const { user, loading } = useContext(AuthContext);
     const location = useLocation();
     if (loading) {
-        return <div className="radial-progress" style={{ "--value": 70 }}>70%</div>
+        return <div className="radial-progress" style={{ "--value": 70 }}></div>
     }
     if (user) {
         return children;
     }
-    return <Navigate state={{ from: location }} replace></Navigate>
+    return <Navigate to='/login' state={{ from: location }} replace></Navigate>
 
 };
 

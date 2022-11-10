@@ -1,10 +1,9 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
-;
 
 const SignUp = () => {
-    const { createUser } = useContext(AuthContext);
+    const { createUser, loading } = useContext(AuthContext);
 
     const handleSignUp = event => {
         event.preventDefault();
@@ -12,12 +11,19 @@ const SignUp = () => {
         const email = form.email.value;
         const password = form.password.value;
 
-        createUser(email, password)
-            .then(result => {
-                const user = result.user;
-                console.log(user);
-            })
-            .catch(error => console.error(error))
+        if (loading) {
+            return <div className="radial-progress" style={{ "--value": 70 }}></div>
+        }
+        else {
+            createUser(email, password)
+                .then(result => {
+                    const user = result.user;
+                    console.log(user);
+                    form.reset();
+                })
+                .catch(error => console.error(error));
+        }
+
     };
 
     return (
@@ -44,7 +50,7 @@ const SignUp = () => {
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="text" name='password' placeholder="password" className="input input-bordered" required />
+                            <input type="password" name='password' placeholder="password" className="input input-bordered" required />
                         </div>
                         <div className="form-control mt-6">
                             <input className="btn btn-primary" type="submit" value="Sign Up" />
