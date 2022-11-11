@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
+import useTitle from '../../Hooks/useTitle';
 
 const SignUp = () => {
     const { createUser, loading } = useContext(AuthContext);
+    useTitle('Signup')
 
     const handleSignUp = event => {
         event.preventDefault();
@@ -27,7 +29,6 @@ const SignUp = () => {
     };
 
     return (
-
         <div className="hero w-full">
             <div className="hero-content flex-col lg:flex-row">
                 <div className="card flex-shrink-0  w-full max-w-sm shadow-2xl bg-base-100 py-8 px-6">

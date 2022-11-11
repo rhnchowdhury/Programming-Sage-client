@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 const CourseShow = ({ course }) => {
     const { _id, title, image, price, details } = course;
+
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
             <PhotoProvider>

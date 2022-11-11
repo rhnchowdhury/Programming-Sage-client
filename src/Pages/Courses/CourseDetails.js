@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
 import Review from '../Reviews/Review';
 
@@ -23,25 +23,30 @@ const CourseDetails = () => {
             student: name,
             email,
             url,
-            message
+            message,
         };
 
-        fetch('http://localhost:5000/reviews', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(review)
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-                if (data.acknowledged) {
-                    alert('review successfully')
-                    form.reset();
-                }
+        if (user?.email) {
+            fetch('http://localhost:5000/reviews', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(review)
             })
-            .catch(err => console.error(err))
+                .then(res => res.json())
+                .then(data => {
+                    if (data.acknowledged) {
+                        alert('review successfully')
+                        form.reset();
+                    }
+                })
+                .catch(err => console.error(err))
+        }
+        else {
+            return alert('Please login to add a review');
+
+        }
     }
 
     return (
@@ -65,11 +70,9 @@ const CourseDetails = () => {
                             <input name='first' type="text" placeholder="First Name" className="input input-bordered w-fulls" />
                             <input name='last' type="text" placeholder="Last Name" className="input input-bordered w-full" />
                             <input name='url' type="text" placeholder="Image URL" className="input input-bordered w-full" />
-                            <input name='email' type="text" placeholder="Your Email" defaultValue={user?.email} className="input input-bordered w-full" required />
+                            <input name='email' type="text" placeholder="Your Email" defaultValue={user?.email} className="input input-bordered w-full" />
                         </div>
-                        <textarea className="textarea textarea-bordered h-24 w-full" name='message' placeholder="Your message"></textarea>
-                        <p className='m-2'>Please <Link className='text-violet-600 font-bold' to='/login'>login </Link> to add a review</p>
-                        <input className='btn  btn-error' type="submit" value="Add review" />
+                        <textarea className="textarea textarea-bordered h-24 w-full mt-2" name='message' placeholder="Your message"></textarea>                        <input className='btn  btn-error' type="submit" value="Add review" />
 
                     </form>
                 </div>

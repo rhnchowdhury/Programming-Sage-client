@@ -8,6 +8,7 @@ import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import MyReview from "../Pages/Reviews/MyReview";
 import SignUp from "../Pages/Signin/SignUp";
+import Update from "../Pages/Updates/Update";
 import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
             {
                 path: '/add',
                 element: <PrivateRoute><AddCourse></AddCourse></PrivateRoute>
+            },
+            {
+                path: '/updates',
+                element: <Update></Update>
             }
         ]
     }

@@ -1,10 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Context/AuthProvider';
+import useTitle from '../../Hooks/useTitle';
 import CourseShow from './CourseShow';
 
 const Course = () => {
     const { loading } = useContext(AuthContext);
     const [courses, setCourses] = useState([]);
+    useTitle('Courses')
 
     useEffect(() => {
         fetch('http://localhost:5000/coursesAll')
@@ -15,7 +17,6 @@ const Course = () => {
     if (loading) {
         return <div className="radial-progress" style={{ "--value": 70 }}></div>
     }
-
 
     return (
         <div className='m-16'>

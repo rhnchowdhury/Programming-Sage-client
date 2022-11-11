@@ -1,5 +1,6 @@
 import React from 'react';
 import { HiOutlineTrash } from "react-icons/hi";
+import { Link } from 'react-router-dom';
 
 const ReviewsShow = ({ review, handleDelete }) => {
     const { _id, student, url, message } = review;
@@ -25,7 +26,7 @@ const ReviewsShow = ({ review, handleDelete }) => {
             </td>
             <td>{message}</td>
             <td>
-                <button className="btn btn-ghost btn-xs">details</button>
+                <Link to='/updates'><button className="btn btn-ghost btn-xs">Edit Review</button></Link>
             </td>
         </tr>
     );
