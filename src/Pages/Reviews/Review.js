@@ -9,7 +9,9 @@ const Review = () => {
     useEffect(() => {
         fetch(`http://localhost:5000/reviews?email=${user?.email}`)
             .then(res => res.json())
-            .then(data => setReviews(data))
+            .then(data => {
+                setReviews(data)
+            })
     }, [user?.email]);
 
     const handleDelete = id => {
@@ -20,7 +22,6 @@ const Review = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
                     if (data.deletedCount > 0) {
                         alert('deleted successfully')
                         const remaining = reviews.filter(rev => rev._id !== id);
@@ -32,9 +33,7 @@ const Review = () => {
     };
 
     return (
-        <div>
-            <h1>this is review page{reviews.length}</h1>
-
+        <div className=''>
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
 
@@ -59,9 +58,6 @@ const Review = () => {
                             ></ReviewsShow>)
                         }
                     </tbody>
-
-
-
                 </table>
             </div>
         </div >

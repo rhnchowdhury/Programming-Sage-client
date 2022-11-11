@@ -12,20 +12,15 @@ const List = () => {
     }, []);
 
     return (
-        <div>
-            <h2>Services: {lists.length}</h2>
+        <div className='m-14'>
             <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                 {
-
-
                     lists.map(list => <ListShow key={list._id}
                         list={list}></ListShow>)
-
                 }
             </div>
-            <div className='place-items-center'>
-
-                <Link to='/courses'><button className="btn btn-error ">View All Courses</button></Link>
+            <div className='card-actions justify-center my-12'>
+                <Link to='/courses'><button className="btn btn-error text-white">View All Courses</button></Link>
             </div>
         </div>
     );

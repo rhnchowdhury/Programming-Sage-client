@@ -4,8 +4,8 @@ import slider2 from '../Slider/slider2.webp';
 import slider3 from '../Slider/slider3.jpg';
 import './Banner.css'
 const Banner = () => {
-    return (
 
+    return (
         <div className="carousel w-full">
             <div id="slide1" className="carousel-item relative w-full design" >
                 <img src={slider1} alt='' className="w-full overlay rounded-md" />
@@ -25,6 +25,11 @@ const Banner = () => {
                     <a href="#slide1" className="btn btn-circle mr-3">❮</a>
                     <a href="#slide3" className="btn btn-circle">❯</a>
                 </div>
+                <div className="absolute flex justify-between transform -translate-y-1/2 top-1/2">
+                    <h1 className='text-6xl font-bold text-white text'>
+                        Skill your self for <span className='ml-14'>your success</span>
+                    </h1>
+                </div>
             </div>
             <div id="slide3" className="carousel-item relative w-full design">
                 <img src={slider3} alt='' className="w-full overlay rounded-md" />
@@ -39,7 +44,6 @@ const Banner = () => {
                 </div>
             </div>
         </div>
-
     );
 };
 

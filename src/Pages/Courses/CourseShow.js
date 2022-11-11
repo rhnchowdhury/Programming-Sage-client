@@ -16,7 +16,8 @@ const CourseShow = ({ course }) => {
             <div className="card-body">
                 <h2 className="card-title">{title}</h2>
                 <p>{details.slice(0, 100) + "..."}</p>
-                <p>${price}</p>
+                <p><strong>Subscription fee:</strong> <span className='font-bold text-orange-400'>${price}</span></p>
+
                 <div className="card-actions justify-end">
                     <Link to={`/courses/${_id}`}><button className="btn btn-primary">View Details</button></Link>
                 </div>

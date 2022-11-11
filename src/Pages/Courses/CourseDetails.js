@@ -15,6 +15,7 @@ const CourseDetails = () => {
         const url = form.url.value;
         const message = form.message.value;
 
+
         const review = {
             course: _id,
             courseName: title,
@@ -24,30 +25,6 @@ const CourseDetails = () => {
             url,
             message
         };
-
-        // if (!login) {
-        //     <p>Please <Link className='text-violet-600 font-bold' to='/login'>login </Link> to add a review</p>
-
-        // } else {
-
-        //     fetch('http://localhost:5000/reviews', {
-        //         method: 'POST',
-        //         headers: {
-        //             'content-type': 'application/json'
-        //         },
-        //         body: JSON.stringify(review)
-        //     })
-        //         .then(res => res.json())
-        //         .then(data => {
-        //             console.log(data)
-        //             if (data.acknowledged) {
-        //                 alert('review successfully')
-        //                 form.reset();
-        //             }
-        //         })
-        //         .catch(err => console.error(err))
-
-        // }
 
         fetch('http://localhost:5000/reviews', {
             method: 'POST',
@@ -68,32 +45,34 @@ const CourseDetails = () => {
     }
 
     return (
-        <div className='grid grid-cols-1 lg:grid-cols-2'>
-            <div className="card w-96 bg-base-100 shadow-xl">
-                <figure><img src={image} alt="" className='w-full h-full' /></figure>
-                <div className="card-body">
-                    <h2 className="card-title">{title}</h2>
-                    <p>{details}</p>
-                    <p>{price}</p>
-                </div>
-            </div>
-
-            <div>
-                <h1>Review Section</h1>
-                <Review></Review>
-                <h2>Others review</h2>
-                <form onSubmit={handleReview}>
-                    <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
-                        <input name='first' type="text" placeholder="First Name" className="input input-bordered w-fulls" />
-                        <input name='last' type="text" placeholder="Last Name" className="input input-bordered w-full" />
-                        <input name='url' type="text" placeholder="Image URL" className="input input-bordered w-full" />
-                        <input name='email' type="text" placeholder="Your Email" defaultValue={user?.email} className="input input-bordered w-full" required />
+        <div className='m-16'>
+            <div className='grid grid-cols-1 lg:grid-cols-2'>
+                <div className="card w-96 bg-base-100 shadow-xl">
+                    <figure><img src={image} alt="" className='w-full h-full' /></figure>
+                    <div className="card-body">
+                        <h2 className="card-title">{title}</h2>
+                        <p>{details}</p>
+                        <p><strong>Subscription fee:</strong> <span className='font-bold text-orange-400'>${price}</span></p>
                     </div>
-                    <textarea className="textarea textarea-bordered h-24 w-full" name='message' placeholder="Your message"></textarea>
-                    <p>Please <Link className='text-violet-600 font-bold' to='/login'>login </Link> to add a review</p>
-                    <input className='btn' type="submit" value="Add my review" />
+                </div>
+                <div>
+                    <h1 className='text-rose-800 font-bold text-4xl m-8 card-actions justify-center'>Others Review</h1>
+                    <Review></Review>
+                    <h1 className='text-rose-800 font-bold text-4xl m-8 card-actions justify-center'>Add Your Review</h1>
 
-                </form>
+                    <form onSubmit={handleReview}>
+                        <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
+                            <input name='first' type="text" placeholder="First Name" className="input input-bordered w-fulls" />
+                            <input name='last' type="text" placeholder="Last Name" className="input input-bordered w-full" />
+                            <input name='url' type="text" placeholder="Image URL" className="input input-bordered w-full" />
+                            <input name='email' type="text" placeholder="Your Email" defaultValue={user?.email} className="input input-bordered w-full" required />
+                        </div>
+                        <textarea className="textarea textarea-bordered h-24 w-full" name='message' placeholder="Your message"></textarea>
+                        <p className='m-2'>Please <Link className='text-violet-600 font-bold' to='/login'>login </Link> to add a review</p>
+                        <input className='btn  btn-error' type="submit" value="Add review" />
+
+                    </form>
+                </div>
             </div>
         </div>
     );
