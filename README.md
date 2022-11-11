@@ -79,7 +79,11 @@ Programming Sage
 ### Project features & functionality
 
 1.It's progaramming course related site. Anyone who want to become a skillfull programmer should see this site.
+
 2. In here, everything is showed step by step how you be a good programmer.
+
 3. In this site, you see javaScript language which is mostly need for becoming a professional Web Developer.
+
 4. In this site, you also see C language which is the inital language to become a professional programmer.
+
 5. Also see Python language. Nowadays, world becoming AI dependent day by day where python is mostly used. And also Swift language ,  which is need for ios.
