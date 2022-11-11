@@ -1,9 +1,19 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthProvider';
+import { FaGoogle } from "react-icons/fa";
 
 const Header = () => {
-    const { user, logOut } = useContext(AuthContext);
+    const { user, googleSignIn, logOut } = useContext(AuthContext);
+
+    const handleGoogleSignIn = () => {
+        googleSignIn()
+            .then(result => {
+                const googleUser = result.user;
+                console.log(googleUser)
+            })
+            .catch(err => console.log(err))
+    }
 
     const handleLogOut = () => {
         logOut()
@@ -46,8 +56,8 @@ const Header = () => {
                     {menuItems}
                 </ul>
             </div>
-            <div className="navbar-end">
-                <a href='#t' className="btn">Get started</a>
+            <div className="navbar-end mb-0">
+                <a href='#t' className="btn" onClick={handleGoogleSignIn}><FaGoogle></FaGoogle> <span className='ml-2'>Sign in</span></a>
             </div>
         </div>
 
