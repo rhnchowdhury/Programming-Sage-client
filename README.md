@@ -78,7 +78,7 @@ Programming Sage
 
 ### Project features & functionality
 
-1.It's progaramming course related site. Anyone who want to become a skillfull programmer should see this site.
+ 1. It's progaramming course related site. Anyone who want to become a skillfull programmer should see this site.
 
 2. In here, everything is showed step by step how you be a good programmer.
 
