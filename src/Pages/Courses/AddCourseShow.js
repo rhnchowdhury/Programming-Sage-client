@@ -13,7 +13,6 @@ const AddCourseShow = () => {
 
     return (
         <div className='m-20'>
-            <h1> course: {adds.length}</h1>
             {
                 adds.map(ad => <div key={ad._id}>
                     <div className="card w-96 bg-base-100 shadow-xl">
