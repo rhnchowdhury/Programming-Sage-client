@@ -33,7 +33,7 @@ const Review = () => {
     };
 
     return (
-        <div className=''>
+        <div>
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
 

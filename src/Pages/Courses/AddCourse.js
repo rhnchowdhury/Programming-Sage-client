@@ -44,14 +44,14 @@ const AddCourse = () => {
 
     return (
         <div className='m-12'>
-            <h1 className='text-3xl font-bold text-center my-8 text-orange-900'>Add a Course</h1>
+            <h1 className='text-3xl font-bold text-center my-8 text-violet-700'>Add a Course</h1>
             <form onSubmit={handleAdd}>
                 <div className='grid grid-cols-1 lg:grid-cols-1 gap-3  place-items-center' >
                     <input type="text" name='email' placeholder="Your email" defaultValue={user?.email} className="input input-bordered input-success w-full max-w-xs" />
                     <input type="text" name='name' placeholder="Course Title" className="input input-bordered input-success w-full max-w-xs" />
                     <input type="text" name='img' placeholder="Image URL" className="input input-bordered input-success w-full max-w-xs" />
-                    <textarea name='message' className="textarea textarea-bordered textarea-success h-3/12 w-3/12" placeholder="Course Details"></textarea>
-                    <button className="btn btn-success">Added</button>
+                    <textarea name='message' className="textarea textarea-bordered textarea-success lg:h-3/12 lg:w-3/12" placeholder="Course Details"></textarea>
+                    <button className="btn bg-violet-700">Added</button>
                 </div>
             </form>
         </div>

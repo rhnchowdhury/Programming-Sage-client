@@ -13,7 +13,7 @@ const Update = () => {
 
     return (
         <div className='m-12'>
-            <h1 className='text-3xl font-bold text-center my-8 text-orange-900'>Update Your review</h1>
+            <h1 className='text-3xl font-bold text-center my-8 text-violet-700'>Update Your review</h1>
             <form>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
                     <input name='first' type="text" placeholder="First Name" className="input input-bordered w-fulls" />
@@ -23,7 +23,7 @@ const Update = () => {
                 </div>
                 <textarea className="textarea textarea-bordered h-24 w-full my-4" name='message' placeholder="Your message"></textarea>
                 <div className='card-actions justify-center'>
-                    <input onClick={handleReview} className='btn ' type="submit" value="Updated" />
+                    <input onClick={handleReview} className='btn bg-violet-700' type="submit" value="Updated" />
                 </div>
             </form>
         </div>

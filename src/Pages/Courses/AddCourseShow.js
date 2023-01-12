@@ -12,10 +12,10 @@ const AddCourseShow = () => {
     }, [user?.email]);
 
     return (
-        <div className='m-20'>
+        <div className='my-4 lg:m-20'>
             {
                 adds.map(ad => <div key={ad._id}>
-                    <div className="card w-96 bg-base-100 shadow-xl">
+                    <div className="card lg:w-96 bg-base-100 shadow-xl">
                         <figure >
                             <img src={ad.img} alt="" className="w-full h-full" />
                         </figure>

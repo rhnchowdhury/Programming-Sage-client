@@ -3,7 +3,7 @@ import Review from './Review';
 
 const MyReview = () => {
     return (
-        <div className='p-16'>
+        <div className='my-5 lg:p-16'>
             <Review></Review>
         </div>
     );
