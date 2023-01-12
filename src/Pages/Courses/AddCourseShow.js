@@ -6,7 +6,7 @@ const AddCourseShow = () => {
     const [adds, setAdds] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/add?email=${user?.email}`)
+        fetch(`https://server-gilt-xi.vercel.app/add?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setAdds(data))
     }, [user?.email]);

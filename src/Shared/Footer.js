@@ -3,10 +3,10 @@ import logo from '../../src/images/code1.jpg'
 
 const Footer = () => {
     return (
-        <footer className="footer p-10 bg-stone-600 text-neutral-content">
+        <footer className="footer p-10 bg-purple-700 text-neutral-content">
             <div>
                 <img src={logo} alt="" className='mask mask-circle' width="100" height="50" viewBox="0 0 24 24" />
-                <p>Programming sage Ltd.<br />Copyright © 2022 - All right reserved</p>
+                <p>Programming sage Ltd.<br />Copyright © 2023 - All right reserved</p>
             </div>
             <div>
                 <span className="footer-title">Social</span>

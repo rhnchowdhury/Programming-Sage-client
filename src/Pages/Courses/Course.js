@@ -9,7 +9,7 @@ const Course = () => {
     useTitle('Courses')
 
     useEffect(() => {
-        fetch('http://localhost:5000/coursesAll')
+        fetch('https://server-gilt-xi.vercel.app/coursesAll')
             .then(res => res.json())
             .then(data => setCourses(data))
     }, []);

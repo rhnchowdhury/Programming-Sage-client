@@ -19,7 +19,7 @@ const AddCourse = () => {
             name, img, message, email
         };
 
-        fetch('http://localhost:5000/add', {
+        fetch('https://server-gilt-xi.vercel.app/add', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

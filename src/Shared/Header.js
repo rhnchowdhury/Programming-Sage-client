@@ -38,17 +38,17 @@ const Header = () => {
 
     return (
 
-        <div className="navbar bg-stone-600">
+        <div className="navbar bg-purple-700">
             <div className="navbar-start">
                 <div className="dropdown">
-                    <label tabIndex={0} className="btn btn-ghost lg:hidden">
+                    <label tabIndex={0} className="btn btn-primary lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
-                    <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                    <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-purple-700 text-white rounded-box w-52">
                         {menuItems}
                     </ul>
                 </div>
-                <Link to='/' className="btn btn-ghost font-extrabold normal-case text-2xl text-white">Programming Sage</Link>
+                <Link to='/' className="btn btn-ghost lg:font-extrabold normal-case lg:text-2xl text-white">Programming Sage</Link>
 
             </div>
             <div className="font-bold text-xl text-white navbar-center hidden lg:flex">
@@ -57,7 +57,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end mb-0">
-                <a href='#t' className="btn" onClick={handleGoogleSignIn}><FaGoogle></FaGoogle> <span className='ml-2'>Sign in</span></a>
+                <a href='#google' className="btn bg-purple-700" onClick={handleGoogleSignIn}><FaGoogle></FaGoogle> <span className='ml-2'>Sign in</span></a>
             </div>
         </div>
 

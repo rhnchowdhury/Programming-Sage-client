@@ -39,7 +39,7 @@ const router = createBrowserRouter([
             {
                 path: '/courses/:id',
                 element: <CourseDetails></CourseDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`)
+                loader: ({ params }) => fetch(`https://server-gilt-xi.vercel.app/courses/${params.id}`)
             },
             {
                 path: '/reviews',

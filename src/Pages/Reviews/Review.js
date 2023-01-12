@@ -7,7 +7,7 @@ const Review = () => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews?email=${user?.email}`)
+        fetch(`https://server-gilt-xi.vercel.app/reviews?email=${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setReviews(data)
@@ -17,7 +17,7 @@ const Review = () => {
     const handleDelete = id => {
         const proceed = window.confirm('You want to cancel this order?');
         if (proceed) {
-            fetch(`http://localhost:5000/reviews/${id}`, {
+            fetch(`https://server-gilt-xi.vercel.app/reviews/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
