@@ -50,14 +50,14 @@ const CourseDetails = () => {
     }
 
     return (
-        <div className='m-16'>
+        <div className='lg:m-16'>
             <div className='grid grid-cols-1 lg:grid-cols-2'>
-                <div className="card w-96 bg-base-100 shadow-xl">
-                    <figure><img src={image} alt="" className='w-full h-full' /></figure>
+                <div className="card lg:w-96 bg-base-100 shadow-xl">
+                    <figure><img src={image} alt="" className='w-full h-56' /></figure>
                     <div className="card-body">
-                        <h2 className="card-title">{title}</h2>
+                        <h2 className="card-title text-violet-700">{title}</h2>
                         <p>{details}</p>
-                        <p><strong>Subscription fee:</strong> <span className='font-bold text-orange-400'>${price}</span></p>
+                        <p><strong className='text-violet-700'>Subscription fee:</strong> <span className='font-bold text-orange-400'>${price}</span></p>
                     </div>
                 </div>
                 <div>
